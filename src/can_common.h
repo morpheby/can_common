@@ -228,8 +228,8 @@ public:
 	uint32_t getBusSpeed();
 	int setRXFilter(uint8_t mailbox, uint32_t id, uint32_t mask, bool extended);
     int setRXFilter(uint32_t id, uint32_t mask, bool extended);
-    boolean attachObj(CANListener *listener);
-	boolean detachObj(CANListener *listener);
+    bool attachObj(CANListener *listener);
+	bool detachObj(CANListener *listener);
     void setGeneralCallback( void (*cb)(CAN_FRAME *) );
 	void setCallback(uint8_t mailbox, void (*cb)(CAN_FRAME *));
     void removeCallback();
