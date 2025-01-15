@@ -350,6 +350,12 @@ int CAN_COMMON::watchFor(uint32_t id, uint32_t mask)
 	else return setRXFilter(id, mask, false);
 }
 
+//Allow a range of IDs through based on mask.
+int CAN_COMMON::watchFor(uint32_t id, uint32_t mask, bool ext)
+{
+	return setRXFilter(id, mask, ext);
+}
+
 //A bit more complicated. Makes sure that the range from id1 to id2 is let through. This might open
 //the floodgates if you aren't careful.
 //There are undoubtedly better ways to calculate the proper values for the filter but this way seems to work.
