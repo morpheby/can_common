@@ -202,7 +202,7 @@ public:
     virtual void setListenOnlyMode(bool state) = 0;
 	virtual void enable() = 0;
 	virtual void disable() = 0;
-	virtual bool sendFrame(CAN_FRAME& txFrame) = 0;
+	virtual bool sendFrame(CAN_FRAME const &txFrame) = 0;
 	virtual bool rx_avail() = 0;
 	virtual uint16_t available() = 0; //like rx_avail but returns the number of waiting frames
 	virtual uint32_t get_rx_buff(CAN_FRAME &msg) = 0;
