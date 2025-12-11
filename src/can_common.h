@@ -168,6 +168,7 @@ class CANListener
 {
 public:
   CANListener();
+  virtual ~CANListener();
 
   virtual void gotFrame(CAN_FRAME *frame, int mailbox);
   virtual void gotFrameFD(CAN_FRAME_FD *frame, int mailbox);

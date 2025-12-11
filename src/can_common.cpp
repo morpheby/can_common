@@ -39,6 +39,10 @@ CANListener::CANListener()
     numFilters = 32;
 }
 
+CANListener::~CANListener()
+{
+}
+
 //an empty version so that the linker doesn't complain that no implementation exists.
 void CANListener::gotFrame(CAN_FRAME */*frame*/, int /*mailbox*/)
 {
