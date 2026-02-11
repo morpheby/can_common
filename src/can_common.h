@@ -90,7 +90,7 @@ typedef union {
     uint8_t byte[8]; //alternate name so you can omit the s if you feel it makes more sense
     struct {
         uint8_t bitField[8];
-        const bool operator[]( int pos ) const
+        bool operator[]( int pos ) const
         {
             if (pos < 0 || pos > 63) return 0;
             int bitFieldIdx = pos / 8;
@@ -117,7 +117,7 @@ typedef union {
 
     struct {
         uint8_t bitField[64];
-        const bool operator[]( int pos ) const
+        bool operator[]( int pos ) const
         {
             if (pos < 0 || pos > 511) return 0; //64 8 bit bytes is 512 bits, we start counting bits at 0
             int bitfieldIdx = pos / 8;
