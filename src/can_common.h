@@ -64,7 +64,7 @@ private:
     int bitPos;
 };
 
-typedef union {
+typedef union BytesUnion {
     uint64_t uint64;
     uint32_t uint32[2]; 
     uint16_t uint16[4];
@@ -105,7 +105,7 @@ typedef union {
     } bit;
 } BytesUnion;
 
-typedef union {
+typedef union BytesUnion_FD {
     uint64_t uint64[8];
     uint32_t uint32[16]; 
     uint16_t uint16[32];
